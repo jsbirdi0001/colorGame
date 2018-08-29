@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Color Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <style>
+    	body{
+    		background-color: rgba(50, 150, 255, 0.5);
+    	}
+    	#nav{
+    		color:white;
+    	}
+    	#nav:hover{
+			background-color: lightgray;
+			color: black;
+			text-decoration:none;
+
+    	}
+    	
+    	.custom{
+    		border-radius: 50px;
+    		border: 0px solid navy;
+    		border-bottom: 2px groove black;
+    		border-right: 2px solid black;
+    		box-shadow: 5px 5px 10px gray;
+    		transition: 0.3s;
+    		-webkit-transition-duration: 0.3s;
+    		-transition-duration: 0.3s;
+    		cursor: pointer;
+    	}
+    	.custom:hover{
+    		box-shadow: 2px 2px 3px rgb(50,50,50);
+    	}
+    	.winner{
+    		position: absolute;
+    		top:0px;
+    		left:0px;
+    		width:40%;
+    		margin: 3% 30%;
+    		display:none;
+    	}
+    	.winner img{
+    		width: 100%;
+    	}
+    	.body{
+			display:;
+    	}
+    	.winner h1{
+			background-color: rgba(100,255,50,0.3);
+			padding: 5px;
+			border-bottom: 2px solid green;
+    	}
+    	@media(max-width:760px){
+    		.display-3{
+    			font-size: 30px;
+    		}
+    		h1{
+    			font-size: 25px;
+    			font-weight: 200;
+    		}
+    		.winner{
+    			width:100%;
+    			margin: 0 0;
+    			padding:0 0;
+    		}
+    		.winner h1{
+    			background-color: rgba(100,255,50,0.3);
+    			padding: 5px;
+    			border-bottom: 2px solid green;
+    		}
+    	}
+    	#icon{
+    		width:7%;
+    		cursor:pointer;
+    	}
+    </style>
+</head>
+<body>
+	<audio  autoplay id="sound">
+		<source src="sound.mp3" type="audio/mpeg">
+	</audio>
+	
+
+	<div class="body">
+		<div class="jumbotron p-2 mb-0" id="jumbotron">
+			<div class="container">
+				<h1 class="text-center">
+					<span class="display-3 font-weight-bold">
+						<span style="color:red">R</span><span style="color:green">G</span><span style="color:blue">B</span>
+						<span id="rgb" class=""></span>
+						<img src="icon.png" alt="sound" id="icon">
+					</span>
+					<br>is Color Code of</h1>
+			</div>
+		</div>
+		<div class="bg-dark p-2 " >
+			<div class="col-md-6 text-center lead" style="margin: 0 auto">
+				<a href="" class="p-2 text-center" id="nav">New Color</a>
+				</div>
+			</div>
+		<br>
+		<h1 class="text-center alert alert-success">Choose Right Color</h1>
+		<div class="d-flex" ><div class="row col-md-8 p-2 mr-auto ml-auto" id="row" style="box-sizing:border-box margin:0 auto">
+				<div class="col-sm-3 mb-4 mx-3 custom" id="clr1" style="padding-bottom:25%;"></div>
+				<div class="col-sm-3 mb-4 mx-3 custom" id="clr2" style="padding-bottom:25%;"></div>
+				<div class="col-sm-3 mb-4 mx-3 custom" id="clr3" style="padding-bottom:25%;"></div>
+				<div class="col-sm-3 mb-4 mx-3 custom" id="clr4" style="padding-bottom:25%;"></div>
+				<div class="col-sm-3 mb-4 mx-3 custom" id="clr5" style="padding-bottom:25%;"></div>
+				<div class="col-sm-3 mb-4 mx-3 custom" id="clr6" style="padding-bottom:25%;"></div>
+			</div>
+			
+		</div>
+		<footer class="p-2 text-center bg-white">Copyrighted &copy; by Jatinder Singh</footer>
+	</div>
+	<div class="winner" >
+		<h1 class="text-success text-center">You Won the Game</h1>
+		<img src="winner.png" alt="Winner" >
+		<button class="btn btn-block btn-primary" id="playAgain"><a href="game.html"  style="text-decoration:none;color:white">Play Again</a></button>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
